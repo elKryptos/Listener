@@ -32,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-               Iterativo selectedIterativo = itera.get(position);
+                Iterativo selectedIterativo = itera.get(position);
                 Intent intent = new Intent(MainActivity.this, Reaction.class);
                 intent.putExtra("titoloDato", selectedIterativo.titolo);
                 intent.putExtra("descrizioneData", selectedIterativo.descrizione);
