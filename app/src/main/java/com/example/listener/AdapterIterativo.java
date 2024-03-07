@@ -19,16 +19,16 @@ public class AdapterIterativo extends ArrayAdapter<Iterativo> {
 
     @NonNull
     @Override
-    public View getView(int position, View convertView,@NonNull ViewGroup parent) {
+    public View get View (int position, View convertView,@NonNull ViewGroup parent) {
         Iterativo iterativo = getItem(position);
-        if (convertView == null){
+        if(convertView == null) {
             LayoutInflater li = (LayoutInflater) ctx.getSystemService((ctx.LAYOUT_INFLATER_SERVICE));
             convertView = li.inflate(R.layout.contenuto, parent, false);
         }
         TextView titoloTextView = convertView.findViewById(R.id.listView1);
         TextView descrizioneTextView = convertView.findViewById(R.id.listView2);
 
-        if(iterativo!= null){
+        if(iterative != null) {
             titoloTextView.setText(iterativo.titolo);
             descrizioneTextView.setText(iterativo.descrizione);
         }
